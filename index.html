@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Learning HTML</title>
+        <!-- <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"> -->
+        <link rel="stylesheet" type="text/css" href="app.css">
+    </head>
+
+    <body>
+
+        <!-- Nav bar added to see the working of postion property on an element -->
+        <header>
+            <nav id="navbar">
+              <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Contact</a></li>
+              </ul>
+            </nav>
+          </header>
+    <!-- Nav bar added to see the working of postion property on an element -->     
+        <br>
+        <h2 class="purple-text">PhotoApp</h2>
+        <main>
+          <a href="#"><img src="https://images.unsplash.com/photo-1575550959106-5a7defe28b56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="A cute orange cat lying on its back." class="small-image green-border"></a>
+          <p class="purple-text">This is a paragraph</p>
+        <div class="silver">
+            <ul>
+                <li>list 1</li>
+                <li>list 1</li>
+                <li>list 1</li>
+            </ul>
+            <!-- hr tag used to add a horizontal line across width of its containing element -->
+            <hr>
+            <ol>
+                <li>list 1</li>
+                <li>list 1</li>
+                <li>list 1</li>
+            </ol>
+        </div>
+        <form action="https://www.google.com" id="photo-form">
+            <input type="text" placeholder="enter text" required>
+            <button type="submit">Submit</button>
+        </form>
+
+            <label for="radioBu">
+                <input id="radioBu" type="radio" name="radioButton" checked>Radio 1
+            </label>
+            <label for="second">
+                <input id="second" type="radio" name="radioButton">Radio 2
+            </label>
+            <label for="third" class="red-text">
+                <input id="third" type="radio" name="radioButton" >Radio 3
+            </label>
+
+            <label for="firstId">
+                <input if="firstId" type="checkbox" name="personality" value="checkbox1" checked>Checkbox 1
+            </label>
+            <label for="secondId">
+                <input id="secondId" type="checkbox" name="personality" value="checkbox2">Checkbox 2
+            </label>
+            <label for="thirdId">
+                <input id="thirdId"  type="checkbox" name="personality" value="checkbox3">Checkbox 3
+            </label>
+        </main>
+        <hr>
+        <!-- from below Learning of Padding, Margin and Border -->
+
+        <h2 class="injected-text red_color darkblue-text" id="darkGreen" style="color: goldenrod;">margin</h2>
+
+        <div class="box yellow-box">
+        <h5 class="box red-box">padding</h5>
+        <h5 class="box blue-box">padding</h5>
+        </div>
+
+        <!-- till above Learning of Padding, Margin and Border -->
+
+        <hr>
+        <!-- Learning Alignment (Applied Visual Design part from freeCodeCamp)-->
+
+        <div class="fullCard" id="thumbnail">
+            <div class="cardContent">
+              <div class="cardText">
+                <h2>Google</h2>
+                <p>Google was founded in September 1998 by Larry Page and Sergey Brin while they were Ph.D. students at <strong>Stanford University</strong> in California.
+                    Together they own about 14 percent of its shares and control 56 percent of the stockholder voting power through supervoting stock.
+                    They incorporated Google as a California privately held company on September 4, 1998, in California.</p>
+              </div>
+              <div class="cardLinks">
+                <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a>
+                <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
+              </div>
+            </div>
+        </div>
+
+        <hr>
+        <!-- Float section. If we don't use float property on below elements then elements will added column wise or stacked on one other.-->
+        <div class="asideAndSection">
+            <section id="left">
+                <h2>Content</h2>
+                <p>Good stuff</p>
+              </section>
+              <aside id="right">
+                <h2>Sidebar</h2>
+                <p>Links</p>
+              </aside>
+        </div>
+        <hr>
+
+        <!-- Color compliment-->
+        <article>
+            <h2>Machine Learning in the Kitchen</h2>
+            <p>Join this two day workshop that walks through how to implement cutting-edge snack-getting algorithms with a command line interface. Coding usually involves writing exact instructions, but sometimes you need your computer to execute flexible commands, like <code>fetch Pringles</code>.</p>
+            <button>Sign Up</button>
+          </article>
+          <article>
+            <h2>Bisection Vegetable Chopping</h2>
+            <p>This week-long retreat will level-up your coding ninja skills to actual ninja skills. No longer is the humble bisection search limited to sorted arrays or coding interview questions, applying its concepts in the kitchen will have you chopping carrots in O(log n) time before you know it.</p>
+            <button>Sign Up</button>
+          </article>
+          <br>
+          <footer>&copy; 2018 FCC Kitchen</footer>
+          
+          <hr>
+          <!-- Color compliment-->
+
+          <!-- Linear gradient color property -->
+          <div class="linearGradient"></div>
+          <hr>
+          <!-- Reapeat Linear gradient color property -->
+          <div class="repeatLinearGradient"></div>
+          <hr>
+          <div class="tranformDiv">
+            <div class="ball" id= "ball1"></div>
+            <div class="ball" id= "ball2"></div>  
+          </div>
+          <hr>
+        <!-- skew funtion -->
+        <div class="skewDiv">
+            <div id="top"></div>
+            <div id="bottom"></div>
+         </div>
+         <!-- skew funtion -->
+         <hr>
+         <div class="shapeDiv">
+            <div class="heart"></div>
+         </div>
+         <hr>
+
+         <!-- Animatio using @keyframes rule -->
+         <div class="animationClass">
+            <div id="rect"></div>
+            <button>Register</button>
+            <div id="animationBall"></div>
+         </div>
+          <!-- Animatio using @keyframes rule -->
+
+    </body>
+</html>

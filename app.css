@@ -1,0 +1,600 @@
+/* Notes */
+
+/* Most of the content in this file is referring content from freeCodeCamp's Responsive Web Design Certification course.. https://www.freecodecamp.org/learn/ */
+
+/* 1. Notes about length units
+Pixels(px) are a type of length unit, which is what tells the browser how to size or space an item. Apart from px, CSS provides other types like Relative and Absolute
+1. Absolute is represented using mm(millimeters) and in(inch)
+2. Relative is represented using em or rem.
+Relative is majoritly used(I guess). when we tried to set any element's size or dimension related properties using "em", it's relative to the parent element's dimensions*/
+
+/* 2. Overriding properties Notes
+1. Classes will override
+2. Classes can override other Classes. But be sure to place the style properties below the class which you want to override.
+    In words we can tell The second declaration in(css file or style tag) will always take precedence over the first declaration
+3. ID's will override all the styles provided in classes. position of ID style properties not matter, because,
+    id declarations override class declarations, regardless of where they are declared in your style tag or css file
+4. Inline styles will override class and id style properties. inline styles  have highest specificity
+5. if we add keywork "!important" to any of the css style, then will override or take precedence among all the styles that we added for that element*/
+
+/* 3. Coloring methods
+1. mentioning colour name
+2. Hex code
+3. RGB value
+    rgba stands for:
+        r = red
+        g = green
+        b = blue
+        a = alpha/level of opacity
+        The alpha value can range from 1, which is fully opaque or a solid color, to 0, which is fully transparent or clear. (source freeCodeCamp)
+*/
+
+/* 4. We can define global styles in css called css variables and we can use these variables with key word "var".
+We have to define our variable in :root tag for global vibility. more details on root below
+:root is a pseudo-class selector that matches the root element of the document, usually the html element.
+By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+
+/* 5. Text align properties 
+1. text-align: justify; causes all lines of text except the last line to meet the left and right edges of the line box.
+2. text-align: center; centers the text
+3. text-align: right; right-aligns the text
+4. text-align: left; (the default) left-aligns the text.*/
+
+/* 6. we can specify the width of an element using the "width" property in CSS*/
+
+/* 7. we can specify the height of an element using the "height" property in CSS*/
+
+/* 8. we can use strong tag in html to make text bold. inside functionality of this tag is it uses css property font-weigth: bold*/
+
+/* 9. We can use u tag to give a text underline. inside functionality of this tag is it uses css property text-decoration: underline./
+
+/* 10. We can use em tag to make a text italicize. inside functionality of this tag is it uses css property font-style: italic./
+
+/* 10. We can use s tag to make a Strikethrough Text. inside functionality of this tag is it uses css property text-decoration: line-through./
+
+/* 11. we use the font-size property to adjust the size of the text in an element. */
+
+/* 12. The box-shadow property applies one or more shadows to an element.
+            The box-shadow property takes values for
+                offset-x (how far to push the shadow horizontally from the element),
+                offset-y (how far to push the shadow vertically from the element),
+                blur-radius,
+                spread-radius and
+                color. In that order. The blur-radius and spread-radius values are optional.
+                More on https://www.w3schools.com/cssref/css3_pr_box-shadow.asp
+*/
+
+/* 13. we can change the opacity of a element by using opacity property in CSS which is used to adjust the opacity, or conversely, the transparency for an item.
+        A value of 1 is opaque, which isn't transparent at all.
+        A value of 0.5 is half see-through.
+        A value of 0 is completely transparent.
+*/
+
+/* 14. we can use text-tranform property to change the appearance of text. text-tranform property takes below values
+            lowercase  ----->  use me to make any text lowercase
+            uppercase  ----->  USE ME TO MAKE ANY TEXT UPPERCASE
+            capitalize ----->  Use Me To Make Starting Letter Of Each Word Capital
+            initial    ----->  Use the default value
+            inherit    ----->  Use the text-transform value from the parent element
+            none       ----->  Default: Use the original text
+*/
+
+/* 14. we can use the font-weight property to set how thick or thin the characters of text*/
+
+/* 15. We can use line-height property to set the space between lines */
+
+/* 16. We can use hover pesudo class selector to change the property of any element when we hovered(mouse movment on that element) over that element */
+
+/* 17. Position property is used to set the position of html element with help of CSS offset peroperties like right, left, top, bottom(these properties tell how many pixels, percentages, or ems to move the item away from where it is normally positioned). some of the position properties are
+        a. relative: css move the element relative to its default position 
+            Note about CSS offsets:
+                The CSS offsets of top or bottom, and left or right tell the browser how far to offset an item relative to where it would sit in the normal flow of the document.
+                You're offsetting an element away from a given spot, which moves the element away from the referenced side (effectively, the opposite direction).
+                As you saw in the last challenge, using the top offset moved the h2 downwards. Likewise, using a left offset moves an item to the right.
+        b. absolute: this property will locks the element in relative position to its parent container. Be sure to give add postiton to element's parent element position
+            property, if you didnt provided one, css will use the default value, which is body tag's position.
+        c. fixed: an element with fixed position stay in the same place even if we scroll the page. example navigation bar with fixed top position. the top, right, bottom, and left properties are used to position the element.
+*/
+
+/* 18. We can push html elements left or right using float peoperty in their containing parent element  */
+
+/* 19. z-index:  z-index tells which html element should be displayed over other i.e.. it takes an int value for html element and check's that whether this value is greater
+                than other element's z-index, if greater it puhes the element top of the screen, if not pushes the other element.
+                In simple words, higher values for the z-index property of an element move it higher in the stack than those with lower values
+*/
+
+/* 20. CSS provides a "linear gradient" color poperty from which we can do color transitions from one to one or one to many.
+        Usally we will use this property with background property. Below is example
+            background: linear-gradient(gradient_direction, color 1, color 2, color 3, ...);
+                The first argument specifies the direction from which color transition starts - it can be stated as a degree,
+                where 90deg makes a vertical gradient and 45deg is angled like a backslash.
+                The following arguments specify the order of colors used in the gradient.
+*/
+
+/* 21. We can use repeating-linear-gradient() property to repeat a specified gradient pattern.  */
+
+/* 22. We can add background image or a pattern using url() function to background property.  */
+
+/* 23. We can change the size of an element with tranfrom property. tranform property uses scale function with a value.
+        We can also use this property in hover state 
+*/
+
+/* 24. We can also use the skewX or skewY functions with tranform property.
+        skewX: skews the selected element along its X (horizontal) axis by a given degree.
+        skewY: skews the selected element along its Y (Verical) axis by a given degree.
+*/
+
+/* 25. We can create shaped with mixing/manipuating different properties in css.  */
+
+/* 26. We can add something to an element before it selected or something after it selected using ::before and ::after pseudo-elements
+        For the ::before and ::after pseudo-elements to function properly, they must have a defined content property.
+        This property is usually used to add things like a photo or text to the selected element.
+        When the ::before and ::after pseudo-elements are used to make shapes, the content property is still required, but it's set to an empty string 
+*/
+
+/* 26. we can do animations in css using animation properties and @keyframes rule. for an html element we have to specify the animation-name
+        and we can use this name in @keyframes rule to which controls what happens during that animation.
+      There are around 8 css animation properties are present, please refer https://www.w3schools.com/cssref/css3_pr_animation.asp
+      We can use CSS animations in multiple occasion like
+        a. changing hover state of element*/
+:root{
+    --color-body : rgb(96, 96, 96);
+}
+
+
+/* We can use @media query to change style of an element at particular size's */
+
+@media (max-width: 300px) {
+    :root {
+        --color-body : red;
+    }
+    
+}
+
+
+body {
+    /* Below method showing using variable and adding fallback colour*/
+    /* background-color: var(--color-body, rgb(96, 96, 96)); */
+    background: url('https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png');
+    /* Below is rgb method */
+    /* background-color: rgb(96, 96, 96); */
+    font-family: monospace;
+    /* color: blue; */
+}
+
+.purple-text{
+    color: purple;
+}
+
+p{
+    font-size: 20px;
+    /* font-family: Lobster, 'Franklin Gothic Medium'; */
+}
+
+.small-image{
+    width: 500px;
+   
+}
+
+
+/* property Precedence  */
+#darkGreen{
+    color: darkgreen;
+}
+.red_color{
+   color: crimson !important; 
+}
+.darkblue-text{
+    color: darkblue ;
+}
+/* property Precedence  */
+
+#photo-form{
+    background-color: green;;
+}
+
+.silver{
+    background-color: silver;
+}
+
+.green-border{
+    border-color: green;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 20px;
+}
+
+/* Padding, MArgin, Border */
+.injected-text {
+    margin-bottom: -25px;
+    text-align: center;
+}
+
+  .box {
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+}
+
+  .yellow-box {
+    background-color: silver;
+    padding: 20px;
+
+    position: relative;
+}
+
+  .red-box {
+    background-color: crimson;
+    color: #fff;
+    /* padding-top: 40px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    padding-right: 20px; */
+    padding: 1.5em;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+
+    position: relative;
+    /* left: 20px; */
+
+    /* position: absolute;
+    left: 20px; */
+
+}
+
+  .blue-box {
+    background-color: blue;
+    color: #fff;
+    /* giving padding with specifiying the side */
+    /* padding-top: 40px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    padding-right: 20px; */
+    /* clockwise notation to give padding  */
+    padding: 40px 20px 20px 40px; /* This produces exact result as above */
+     /* giving margin with specifiying the side */
+    /* margin-top: 40px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    margin-right: 20px; */
+    margin: 40px 20px 20px 40px; /* This produces exact result as above */
+    
+}
+
+  /* Padding, Margin, Border */
+
+  /* type selectors example text, radio, checkboox, number etc.. */
+  [type='checkbox']{
+    margin: 10px 0 15px 0;
+}
+
+
+/*Learning on Applied Visual Design */
+
+
+.links {
+    font-size: 1.5em;
+    margin-right: 20px;
+    opacity: 0.7;
+}
+.fullCard {
+    border: 1.5px solid black;
+    border-radius: 5px;
+    margin: 20px 20px;
+    padding: 4px;
+    background-color: silver;
+}
+  .cardContent {
+    padding: 10px;
+}
+
+.fullCard h2{
+    text-align: center;
+    background-color: rgba(45, 45, 45, 0.1);
+    padding: 10px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.fullCard p{
+    text-align: center;
+    line-height: 30px;
+}
+
+/* Box shadow */
+#thumbnail{
+    box-shadow: 0 10px 20px rgba(255,0,0,0.5);
+}
+
+/* hover property */
+.links:hover {
+    color: blue;
+}
+
+/* Nav bar css and demo of positin fixed */
+#navbar {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    background-color: goldenrod;
+  }
+  nav ul {
+    margin: 0px;
+    padding: 5px 0px 5px 30px;
+  }
+  nav li {
+    display: inline;
+    margin-right: 20px;
+    font-size:1.5em;
+    color: white;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  /* Nav bar css and demo of positin fixed */
+
+/* if we add float left to below element the margin left  will become 0, that is it will to left */
+  #left {
+ float: left;
+    width: 40%;
+  }
+
+/* if we add float right to below element the margin right become 0, that is it float to right */
+  #right {
+    float: right; 
+    width: 40%;
+  }
+  aside, section {
+    padding: 2px;
+    background-color: #ccc;
+  }
+
+  .asideAndSection{
+      width: 100%;
+      height: 200px;
+  }
+
+  #footer{
+    margin: 150px 0 0 0;
+  }
+
+/* Color compliment */
+
+header {
+    background-color: teal;
+    color: white;
+    padding: 0.25em;
+  }
+article > h2 {
+    color: teal;
+}
+article > button {
+    background-color: orange;
+}
+footer {
+    background-color: teal;
+    color: white;
+    padding: 0.5em;
+}
+
+/* Linear Gradient property */
+
+.linearGradient{
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin: 50px auto;
+    background: linear-gradient(35deg, #CCFF44, #FF55CC);
+}
+
+/* Repeating linear gradient. in below example,
+the gradient starts with the color yellow at 0 pixels which blends into the second color blue at 40 pixels away from the start.
+Since the next color stop is also at 40 pixels, the gradient immediately changes to the third color green,
+which itself blends into the fourth color value red as that is 80 pixels away from the beginning of the gradient*/
+
+.repeatLinearGradient{
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin:  50px auto;
+    background: repeating-linear-gradient(
+      90deg,
+      yellow 0px,
+      blue 40px,
+      green 40px,
+      red 80px
+    );
+}
+
+
+/* Tranform property usage */
+.tranformDiv{
+    width: 100%;
+    height: 150px;
+}
+.ball {
+    width: 40px;
+    height: 40px;
+    margin: 50 auto;
+    position: relative;
+    top: 5px;
+    left: 10px;
+    background: linear-gradient(
+      35deg,
+      #ff66d3,
+      #0066cc
+    );
+    border-radius: 50%;
+}
+#ball1 {
+    left: 20%;
+}
+#ball2 {
+    left: 65%;
+    transform: scale(3);
+}
+
+/* scale with hover property */
+#ball1:hover {
+    transform: scale(3);
+}
+#ball2:hover  {
+    transform: scale(1);
+}
+
+/* Skew function with tranform property in hover state */
+.skewDiv{
+    width: 100%;
+    height: 280px;
+}
+
+.skewDiv > div{
+    width: 70%;
+    height: 100px;
+    margin:  50px auto;
+  }
+  #top {
+    background-color: red;
+  }
+  #bottom {
+    background-color: blue;
+  }
+  #top:hover {
+    background-color: red;
+    transform: skewX(-50deg);
+  }
+  #bottom:hover  {
+    background-color: blue;
+    transform: skewX(50deg);
+  }
+
+
+/* Usage os before and after pseudo-elements*/
+.shapeDiv{
+    height: 80px;
+    
+}
+.heart {
+    margin: 20px auto;
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+}
+.heart::after {
+    background-color: red;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;
+}
+.heart::before {
+    content:"" ;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+}
+
+/* Animation using @keyframes rule */
+.animationClass{
+    width: 100%;
+    height: 250px;
+}
+
+.animationClass > div {
+    height: 40px;
+    width: 50%;
+    background: black;
+    margin: 50px auto;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* The rect element's animation name is rainbow, which refers to @keyframes rainbow rule for animation which runs for 4 seconds by animation-duration*/
+#rect {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    
+}
+
+/* Below animation will set the rectangle element's background color red at 0% i.e..start of animation,
+     at 50% background color will be set to green and at 100% background color set to blue 
+*/
+
+@keyframes rainbow {
+        0% {
+          background-color: red;
+          top: 0px;
+          left: 0px;
+        }
+        50% {
+          background-color: green;
+          top: 50px;
+          left: 25px;
+        }
+        100% {
+          background-color: blue;
+          top: 0px;
+          left: -25px;
+        }
+}
+
+.animationClass > button {
+    border-radius: 5px;
+    color: white;
+    background-color: #0F5897;
+    padding: 5px 10px 8px 10px;
+  }
+
+.animationClass >button:hover {
+    /* animation name */
+    animation-name: background-color;
+    /* duration of animation */
+    animation-duration: 500ms;
+
+    animation-fill-mode: forwards;
+}
+
+@keyframes background-color{
+    100% {
+        background-color: #4791d0;
+    }
+}
+
+#animationBall {
+    width: 70px;
+    height: 70px;
+    margin: 50px 0;
+    position: relative;
+    left: 20%;
+    border-radius: 50%;
+    background: linear-gradient(
+      35deg,
+      red,
+      #ffcccc
+    );
+    animation-name: fade;
+    animation-duration: 3s;
+    /* specifies how manu times animations has to run */
+    animation-iteration-count: 2;
+    animation-timing-function: ease-in;
+}
+
+@keyframes fade {
+    50% {
+      left: 60%;
+      opacity: 50%;
+    }
+}
