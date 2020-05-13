@@ -136,7 +136,12 @@ By creating your variables in :root, they will be available globally and can be 
         and we can use this name in @keyframes rule to which controls what happens during that animation.
       There are around 8 css animation properties are present, please refer https://www.w3schools.com/cssref/css3_pr_animation.asp
       We can use CSS animations in multiple occasion like
-        a. changing hover state of element*/
+        a. changing hover state of element
+*/
+
+
+
+
 :root{
     --color-body : rgb(96, 96, 96);
 }
@@ -176,6 +181,9 @@ p{
    
 }
 
+h1{
+  margin-top: 40px;
+}
 
 /* property Precedence  */
 #darkGreen{
@@ -597,4 +605,10 @@ which itself blends into the fourth color value red as that is 80 pixels away fr
       left: 60%;
       opacity: 50%;
     }
+}
+
+/* audio part */
+.audioClass{
+  width: 100%;
+  height: 100px;
 }

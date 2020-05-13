@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Learning HTML</title>
+        <title>Web Dev With freeCodeCamp</title>
         <!-- <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"> -->
         <link rel="stylesheet" type="text/css" href="app.css">
     </head>
-
     <body>
+        <!-- Notes: -->
+        <!-- 1. It's always good practice to keep only one h1 in out html page and also its good to practice some structure when using headers,
+              this link will help you, https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/use-headings-to-show-hierarchical-relationships-of-content -->
+        <!-- 2. It's always good practice to use tag appropriatly in html pages, like we can have only one main tag. 
+          based on usage of tag's properly, sometime tag name alone can indicate the type of information it contains, which adds semantic meaning to that content  -->
+        <!-- 2. <div> - groups content
+                <section> - groups related content
+                <article> - groups independent, self-contained content -->
+        <!-- 3. Nav bar added to see the working of postion property on an element -->
+        <!-- 4. This nave is fixed to top position by using property postion top and also used set left and top offset's -->
+        <!-- 5. header tag is used to wrap introductory information or navigation links for its parent tag and works well around content that's repeated at the top on multiple pages. -->
+        <!-- 6. navtag is used to wrap around the main navigation links in your page -->
+        <!-- 7. footer element has a built-in landmark feature that allows assistive devices to quickly navigate to it. It's primarily used to contain copyright information or links to related documents that usually sit at the bottom of a page. -->
+        <!-- 8. we can use audio tag to show content. The audio tag supports the controls attribute. This shows the browser default play, pause, and other controls, and supports keyboard functionality -->
 
-        <!-- Nav bar added to see the working of postion property on an element -->
+
+
+
+        
         <header>
+          <h1>Header 1(h1)</h1>
             <nav id="navbar">
               <ul>
                 <li><a href="">Home</a></li>
@@ -17,10 +34,14 @@
               </ul>
             </nav>
           </header>
-    <!-- Nav bar added to see the working of postion property on an element -->     
+        <!-- Nav bar added to see the working of postion property on an element -->     
+          
         <br>
         <h2 class="purple-text">PhotoApp</h2>
         <main>
+        <!-- 5. It's always good practice to add an alt to an image. However if sometimes images were alredy grouped with other captions,
+                that time there is no need to put text in alt tag, rather we can keep it empty-->
+          
           <a href="#"><img src="https://images.unsplash.com/photo-1575550959106-5a7defe28b56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="A cute orange cat lying on its back." class="small-image green-border"></a>
           <p class="purple-text">This is a paragraph</p>
         <div class="silver">
@@ -29,7 +50,7 @@
                 <li>list 1</li>
                 <li>list 1</li>
             </ul>
-            <!-- hr tag used to add a horizontal line across width of its containing element -->
+        <!-- 6. hr tag used to add a horizontal line across width of its containing element -->
             <hr>
             <ol>
                 <li>list 1</li>
@@ -63,7 +84,7 @@
             </label>
         </main>
         <hr>
-        <!-- from below Learning of Padding, Margin and Border -->
+      <!-- 7. Padding, Margin and Border -->
 
         <h2 class="injected-text red_color darkblue-text" id="darkGreen" style="color: goldenrod;">margin</h2>
 
@@ -72,10 +93,9 @@
         <h5 class="box blue-box">padding</h5>
         </div>
 
-        <!-- till above Learning of Padding, Margin and Border -->
-
+      <!-- Padding, Margin and Border  -->
         <hr>
-        <!-- Learning Alignment (Applied Visual Design part from freeCodeCamp)-->
+        <!-- 8. Learning Alignment (Applied Visual Design part from freeCodeCamp)-->
 
         <div class="fullCard" id="thumbnail">
             <div class="cardContent">
@@ -93,7 +113,7 @@
         </div>
 
         <hr>
-        <!-- Float section. If we don't use float property on below elements then elements will added column wise or stacked on one other.-->
+        <!-- 9. Float section. If we don't use float property on below elements then elements will added column wise or stacked on one other.-->
         <div class="asideAndSection">
             <section id="left">
                 <h2>Content</h2>
@@ -106,7 +126,7 @@
         </div>
         <hr>
 
-        <!-- Color compliment-->
+        <!-- 10. Color compliment-->
         <article>
             <h2>Machine Learning in the Kitchen</h2>
             <p>Join this two day workshop that walks through how to implement cutting-edge snack-getting algorithms with a command line interface. Coding usually involves writing exact instructions, but sometimes you need your computer to execute flexible commands, like <code>fetch Pringles</code>.</p>
@@ -123,10 +143,10 @@
           <hr>
           <!-- Color compliment-->
 
-          <!-- Linear gradient color property -->
+          <!-- 11. Linear gradient color property -->
           <div class="linearGradient"></div>
           <hr>
-          <!-- Reapeat Linear gradient color property -->
+          <!-- 12. Reapeat Linear gradient color property -->
           <div class="repeatLinearGradient"></div>
           <hr>
           <div class="tranformDiv">
@@ -134,7 +154,7 @@
             <div class="ball" id= "ball2"></div>  
           </div>
           <hr>
-        <!-- skew funtion -->
+        <!-- 13. skew funtion -->
         <div class="skewDiv">
             <div id="top"></div>
             <div id="bottom"></div>
@@ -146,13 +166,22 @@
          </div>
          <hr>
 
-         <!-- Animatio using @keyframes rule -->
+         <!-- 14. Animation using @keyframes rule -->
          <div class="animationClass">
             <div id="rect"></div>
             <button>Register</button>
             <div id="animationBall"></div>
          </div>
           <!-- Animatio using @keyframes rule -->
+         <hr>
+          <!-- Audio tag -->
+          <div class="audioClass">
+            <p>A sound clip of Zersiax's screen reader in action.</p>
+            <audio id="audioClip" controls>
+              <source src="https://s3.amazonaws.com/freecodecamp/screen-reader.mp3" type="audio/mpeg" />
+            </audio>
+          </div>
+          <hr>
 
     </body>
 </html>
