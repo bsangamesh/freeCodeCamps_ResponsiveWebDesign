@@ -607,8 +607,9 @@ which itself blends into the fourth color value red as that is 80 pixels away fr
     }
 }
 
-/* audio part */
+/* audio part css*/
 .audioClass{
   width: 100%;
   height: 100px;
 }
+
