@@ -3,42 +3,46 @@
 /* Most of the content in this file is referring content from freeCodeCamp's Responsive Web Design Certification course.. https://www.freecodecamp.org/learn/ */
 
 /* 1. Notes about length units
-Pixels(px) are a type of length unit, which is what tells the browser how to size or space an item. Apart from px, CSS provides other types like Relative and Absolute
-1. Absolute is represented using mm(millimeters) and in(inch)
-2. Relative is represented using em or rem.
-Relative is majoritly used(I guess). when we tried to set any element's size or dimension related properties using "em", it's relative to the parent element's dimensions*/
+      Pixels(px) are a type of length unit, which is what tells the browser how to size or space an item. Apart from px, CSS provides other types like Relative and Absolute
+      1. Absolute is represented using mm(millimeters) and in(inch)
+      2. Relative is represented using em or rem.
+      Relative is majoritly used(I guess). when we tried to set any element's size or dimension related properties using "em", it's relative to the parent element's dimensions
+*/
 
 /* 2. Overriding properties Notes
-1. Classes will override
-2. Classes can override other Classes. But be sure to place the style properties below the class which you want to override.
-    In words we can tell The second declaration in(css file or style tag) will always take precedence over the first declaration
-3. ID's will override all the styles provided in classes. position of ID style properties not matter, because,
-    id declarations override class declarations, regardless of where they are declared in your style tag or css file
-4. Inline styles will override class and id style properties. inline styles  have highest specificity
-5. if we add keywork "!important" to any of the css style, then will override or take precedence among all the styles that we added for that element*/
+        1. Classes will override
+        2. Classes can override other Classes. But be sure to place the style properties below the class which you want to override.
+            In words we can tell The second declaration in(css file or style tag) will always take precedence over the first declaration
+        3. ID's will override all the styles provided in classes. position of ID style properties not matter, because,
+            id declarations override class declarations, regardless of where they are declared in your style tag or css file
+        4. Inline styles will override class and id style properties. inline styles  have highest specificity
+        5. if we add keywork "!important" to any of the css style, then will override or take precedence among all the styles that we added for that element
+*/
 
 /* 3. Coloring methods
-1. mentioning colour name
-2. Hex code
-3. RGB value
-    rgba stands for:
-        r = red
-        g = green
-        b = blue
-        a = alpha/level of opacity
-        The alpha value can range from 1, which is fully opaque or a solid color, to 0, which is fully transparent or clear. (source freeCodeCamp)
+      1. mentioning colour name
+      2. Hex code
+      3. RGB value
+          rgba stands for:
+              r = red
+              g = green
+              b = blue
+              a = alpha/level of opacity
+              The alpha value can range from 1, which is fully opaque or a solid color, to 0, which is fully transparent or clear. (source freeCodeCamp)
 */
 
 /* 4. We can define global styles in css called css variables and we can use these variables with key word "var".
-We have to define our variable in :root tag for global vibility. more details on root below
-:root is a pseudo-class selector that matches the root element of the document, usually the html element.
-By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+          We have to define our variable in :root tag for global vibility. more details on root below
+          :root is a pseudo-class selector that matches the root element of the document, usually the html element.
+          By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.
+*/
 
 /* 5. Text align properties 
-1. text-align: justify; causes all lines of text except the last line to meet the left and right edges of the line box.
-2. text-align: center; centers the text
-3. text-align: right; right-aligns the text
-4. text-align: left; (the default) left-aligns the text.*/
+        1. text-align: justify; causes all lines of text except the last line to meet the left and right edges of the line box.
+        2. text-align: center; centers the text
+        3. text-align: right; right-aligns the text
+        4. text-align: left; (the default) left-aligns the text.
+*/
 
 /* 6. we can specify the width of an element using the "width" property in CSS*/
 
@@ -99,8 +103,8 @@ By creating your variables in :root, they will be available globally and can be 
 /* 18. We can push html elements left or right using float peoperty in their containing parent element  */
 
 /* 19. z-index:  z-index tells which html element should be displayed over other i.e.. it takes an int value for html element and check's that whether this value is greater
-                than other element's z-index, if greater it puhes the element top of the screen, if not pushes the other element.
-                In simple words, higher values for the z-index property of an element move it higher in the stack than those with lower values
+          than other element's z-index, if greater it puhes the element top of the screen, if not pushes the other element.
+          In simple words, higher values for the z-index property of an element move it higher in the stack than those with lower values
 */
 
 /* 20. CSS provides a "linear gradient" color poperty from which we can do color transitions from one to one or one to many.
@@ -116,7 +120,7 @@ By creating your variables in :root, they will be available globally and can be 
 /* 22. We can add background image or a pattern using url() function to background property.  */
 
 /* 23. We can change the size of an element with tranfrom property. tranform property uses scale function with a value.
-        We can also use this property in hover state 
+          We can also use this property in hover state .
 */
 
 /* 24. We can also use the skewX or skewY functions with tranform property.
@@ -139,6 +143,69 @@ By creating your variables in :root, they will be available globally and can be 
         a. changing hover state of element
 */
 
+/* 27. Use display flex property to make responsive page using flex properties */
+
+/* 28. Adding display: flex to an element turns it into a flex container. This makes it possible to align any children of that element into rows or columns.
+          You do this by adding the flex-direction property to the parent item and setting it to row or column. Creating a row will align the children horizontally,
+            and creating a column will align the children vertically 
+        i.e.. we can use felx direction property to form column or row using html elemets
+        example: if you want make column using html elements do like below,
+                   display:flex;
+                   flex-direction: column;
+                 if you want make row using html elements do like below,
+                   display:flex;
+                   flex-direction: row;
+*/
+
+/* 29. We can use justify-content property to align flexed items along the main axis(x-axiz)/horizontal axis*/
+
+/* 30. SImilar to justify-content, we use align-items property to align flexed items along the cross axis(y-axiz)/vertical axis */
+
+/* 31. Use flex-shrink and flex-grow property to shrink or grow the flex elements
+          a. flex-shrink controls the size of the items when the container shrinks
+          b. flex-grow property controls the size of items when the parent container expands
+*/
+
+/* 32. We can use flex-basis property to specify the initial size of the item before CSS makes adjustments with flex-shrink or flex-grow */
+
+/* 33. Using flex property alone, we can set flex-grow, flex-basis and flex-shrink properties in shorthand
+       ex: flex: flex-grow flex-shrink flex-basis;
+           flex: 0 1 10px; 
+*/
+
+/* 34. Use order property to tell CSS the order of how flex items appear in the flex container. 
+        By default, items will appear in the same order they come in the source HTML. The property takes numbers as values, 
+            and negative numbers can be used
+*/
+
+/* 35. using CSS we can make any element to grid container using display property which inturn set to grid.
+        In CSS Grid, the parent element is referred to as the container and its children are called items
+*/
+
+/* 36. we cab create columns inorder to define structure for Grid using grid-template-columns */
+
+/* 37. when we set grid-template-columns, rows number will be automatically set. If you want manually set, use grid-template-rows  */
+
+/* 38. If you want to give space between columns and row then, use grid-column-gap and grid-column-row property */
+
+/* 39. We can use grid-column property to control the amount of columns an item will consume.
+        use the grid-column property in conjunction with the line numbers you want the item to start and stop at
+          ex: grid-column: 1 / 3;
+              This will make the item start at the first vertical line of the grid on the left and span to the 3rd line of the grid, consuming two columns.
+*/
+
+/* 40. In CSS Grid each cell has data, and each data by default strechted horizontally i.e using "justify-self:strech". 
+        However justify-self property accepts other values,
+            start: aligns the content at the left of the cell,
+            center: aligns the content in the center of the cell,
+            end: aligns the content at the right of the cell. 
+*/
+
+/* 41. Similar to justify-self, we can align items vertically using align-self. */
+
+/* 42. we can use justify-items to align items horizontally and vertically */
+
+/* 43. */
 
 
 
@@ -146,16 +213,13 @@ By creating your variables in :root, they will be available globally and can be 
     --color-body : rgb(96, 96, 96);
 }
 
-
 /* We can use @media query to change style of an element at particular size's */
-
 @media (max-width: 300px) {
     :root {
         --color-body : red;
     }
     
 }
-
 
 body {
     /* Below method showing using variable and adding fallback colour*/
@@ -167,44 +231,50 @@ body {
     /* color: blue; */
 }
 
+/* Changing color using color property */
 .purple-text{
     color: purple;
 }
 
+/* usage of font size with text */
 p{
     font-size: 20px;
     /* font-family: Lobster, 'Franklin Gothic Medium'; */
 }
 
+/* usage of width property with image */
 .small-image{
     width: 500px;
    
 }
 
+/* Giving margin at top of using margin top */
 h1{
   margin-top: 40px;
 }
 
-/* property Precedence  */
+/* Changing color using color property*/
 #darkGreen{
     color: darkgreen;
 }
+
+/* Changing color using color property and using "!important" keyword to give high importance for override(property Precedence)*/
 .red_color{
    color: crimson !important; 
 }
 .darkblue-text{
     color: darkblue ;
 }
-/* property Precedence  */
 
+/* Setting background color using background color property */
 #photo-form{
     background-color: green;;
 }
-
 .silver{
     background-color: silver;
 }
 
+/* Creating border using border properties */
 .green-border{
     border-color: green;
     border-width: 10px;
@@ -212,27 +282,31 @@ h1{
     border-radius: 20px;
 }
 
-/* Padding, MArgin, Border */
+/* Giving margin to bottom position*/
 .injected-text {
-    margin-bottom: -25px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
-  .box {
+/* Aligning content of the box with text align property */
+/* Padding, Margin, Border 
+      Padding: is the space between html element and its border
+      Marging: is the space between html and other html elements
+*/
+.box {
     border-style: solid;
     border-color: black;
     border-width: 5px;
     text-align: center;
 }
 
-  .yellow-box {
+.yellow-box {
     background-color: silver;
     padding: 20px;
-
     position: relative;
 }
 
-  .red-box {
+.red-box {
     background-color: crimson;
     color: #fff;
     /* padding-top: 40px;
@@ -244,16 +318,13 @@ h1{
     margin-left: 40px;
     margin-bottom: 20px;
     margin-right: 20px;
-
     position: relative;
     /* left: 20px; */
-
     /* position: absolute;
     left: 20px; */
-
 }
 
-  .blue-box {
+.blue-box {
     background-color: blue;
     color: #fff;
     /* giving padding with specifiying the side */
@@ -263,31 +334,30 @@ h1{
     padding-right: 20px; */
     /* clockwise notation to give padding  */
     padding: 40px 20px 20px 40px; /* This produces exact result as above */
-     /* giving margin with specifiying the side */
+    /* giving margin with specifiying the side */
     /* margin-top: 40px;
     margin-left: 40px;
     margin-bottom: 20px;
     margin-right: 20px; */
     margin: 40px 20px 20px 40px; /* This produces exact result as above */
-    
 }
 
-  /* Padding, Margin, Border */
-
-  /* type selectors example text, radio, checkboox, number etc.. */
-  [type='checkbox']{
+/* We can assign CSS properties to any type of HTML elements with input type selectors example text, radio, checkboox, number etc.. */
+[type='checkbox']{
     margin: 10px 0 15px 0;
 }
 
-
-/*Learning on Applied Visual Design */
-
-
+/*Section of Applied Visual Design from freeCodeCamp */
+/* Giving opacity to anchor tags. opacity ranges from 0 minimum value and 1 is maximum value
+    where 0 is transparent
+          1 is no transparent
+*/
 .links {
     font-size: 1.5em;
     margin-right: 20px;
     opacity: 0.7;
 }
+
 .fullCard {
     border: 1.5px solid black;
     border-radius: 5px;
@@ -295,7 +365,8 @@ h1{
     padding: 4px;
     background-color: silver;
 }
-  .cardContent {
+
+.cardContent {
     padding: 10px;
 }
 
@@ -312,7 +383,7 @@ h1{
     line-height: 30px;
 }
 
-/* Box shadow */
+/* Creating a shadow around image/box using Box shadow property*/
 #thumbnail{
     box-shadow: 0 10px 20px rgba(255,0,0,0.5);
 }
@@ -322,24 +393,24 @@ h1{
     color: blue;
 }
 
-/* Nav bar css and demo of positin fixed */
+/*Nav bar css and demo of positin fixed */
 #navbar {
     position: fixed;
     top:0;
     left:0;
     width: 100%;
     background-color: goldenrod;
-  }
-  nav ul {
+}
+nav ul {
     margin: 0px;
     padding: 5px 0px 5px 30px;
-  }
-  nav li {
+}
+nav li {
     display: inline;
     margin-right: 20px;
     font-size:1.5em;
     color: white;
-  }
+}
   a {
     text-decoration: none;
   }
@@ -613,3 +684,188 @@ which itself blends into the fourth color value red as that is 80 pixels away fr
   height: 100px;
 }
 
+/* Figure caption section */
+
+.figureClass{
+  width: 100%;
+  height: 400px; 
+}
+#figImage, figcaption{
+  width: 70%;
+  height: 350px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figcaption{
+  background: grey;
+  height: 20px;
+}
+
+/* Figure caption section */
+
+/* label and for */
+.forClass{
+  width: 100%;
+  height: 120px;
+  display: block;
+  margin-left: 150px;
+}
+
+.forClass input[type=text], input[type=email]{
+  width: 70%;
+}
+.forClass button{
+  background: goldenrod;
+}
+/* label and for */
+
+
+/* fieldset section css */
+.fieldsetClass{
+  width: 80%;
+  height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* fieldset section css */
+
+
+/* media query section */
+@media (max-width: 500px){
+  .forClass input[type=text], input[type=email]{
+    width: 100%;
+  }
+}
+
+/* CSS Fles Section */
+
+.cssFlex{
+  height: 600px;
+}
+#box-container {
+  height: 300px;
+}
+#box-container-using-flex{
+  height: 300px;
+  display: flex;
+}
+
+#box-1 {
+  background-color: dodgerblue;
+  width: 50%;
+  height: 50%;
+}
+
+#box-2 {
+  background-color: orangered;
+  width: 50%;
+  height: 50%;
+}
+
+/* Flex properties */
+.flexProperty{
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.flexProperty header {
+  display: flex;
+  flex-direction: row;
+}
+.flexProperty header .profile-thumbnail {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+.flexProperty header .profile-name {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  color: black;
+  justify-content: center;
+}
+.flexProperty header .follow-btn {
+  display: flex;
+  margin: 0 0 0 auto;
+  align-items: center;
+}
+.flexProperty header .follow-btn button {
+  border: 0;
+  border-radius: 3px;
+  padding: 5px;
+}
+.flexProperty header h3, header h4 {
+  display: flex;
+  margin: 0;
+}
+.flexProperty #inner p {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.flexProperty #inner hr {
+  margin: 20px 0;
+  border-style: solid;
+  opacity: 0.3;
+}
+.flexProperty footer {
+  display: flex;
+  flex-direction: row;
+}
+.flexProperty footer .stats {
+display: flex;
+  font-size: 15px;
+}
+.flexProperty footer .stats strong {
+  font-size: 18px;
+}
+.flexProperty footer .stats .likes {
+  margin-left: 10px;
+}
+.flexProperty footer .cta {
+  margin-left: auto;
+}
+.flexProperty footer .cta button {
+  border: 0;
+  background: transparent;
+}
+/* CSS Flex Section */
+
+/* CSS Grid Section */
+.d1{background:orangered;}
+.d2{
+  background:LightSalmon;
+  justify-self: center;
+}
+.d3{background:grey;}
+.d4{background:blueviolet;}
+.d5{
+  background:rgb(2, 107, 2);
+  grid-column: 2 / 4;
+  grid-row:2/4;
+}
+
+.container {
+    font-size: 40px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    /* grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 50px 50px; */
+
+    /* changing size of row and column using CSS Grid units */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    /* grid-column-gap: 20px;
+    grid-row-gap: 10px; */
+     /* Alternative for above. grid-gap: grid-template-rows grid-template-column */
+    grid-gap: 15px 20px;
+}
+
+
+
+/* CSS Grid Section */

@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-<<<<<<< HEAD
         <title>Web Dev With freeCodeCamp</title>
         <!-- <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"> -->
-=======
-        <title>Learning HTML</title>
->>>>>>> 88569105c08e5994cb83ff78a072cc1ef6dd253e
         <link rel="stylesheet" type="text/css" href="app.css">
     </head>
     <body>
-        <!-- Notes: -->
+        <!-- Notes: Most of the content below is from freeCodeCamp's Responsive Web Design Certification course.. https://www.freecodecamp.org/learn/ -->
         <!-- 1. It's always good practice to keep only one h1 in out html page and also its good to practice some structure when using headers,
               this link will help you, https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/use-headings-to-show-hierarchical-relationships-of-content -->
         <!-- 2. It's always good practice to use tag appropriatly in html pages, like we can have only one main tag. 
@@ -24,9 +20,26 @@
         <!-- 6. navtag is used to wrap around the main navigation links in your page -->
         <!-- 7. footer element has a built-in landmark feature that allows assistive devices to quickly navigate to it. It's primarily used to contain copyright information or links to related documents that usually sit at the bottom of a page. -->
         <!-- 8. we can use audio tag to show content. The audio tag supports the controls attribute. This shows the browser default play, pause, and other controls, and supports keyboard functionality -->
-
-
-
+        <!-- 9. we can use figure tag to bind and image and caption for that image. to add caption we use figCaption tag  -->
+        <!-- 10. for a input(inside form) we can add label using label tag. One important point to follow is that, label tag contains for attribute,
+                  to which we need to map "id" from input tag. We can add as many as input tags inside form tag -->
+        <!-- 11. we can wrap multiple radio button using fieldset. The fieldset tag surrounds the entire grouping of radio buttons to achieve this.
+                  It often uses a legend tag to provide a description for the grouping, which is read by screen readers for each choice in the fieldset element -->
+        <!-- 12. similarly input type text or email, we cna create a input of type date, which helps us to pick a date  -->
+        <!-- 13. HTML5 also introduced the time element along with a datetime attribute to standardize times. This is an inline element that can wrap a date or time on a page.
+                  A valid format of that date is held by the datetime attribute. This is the value accessed by assistive devices. It helps avoid confusion by stating a standardized version of a time, even if it's written in an informal or colloquial manner in the text. 
+        -->
+        <!-- 14. Take care of text Contrast in your page -->
+        <!-- 15. Give meaning full descriptin for anchor tags -->
+        <!-- 16. using media(@media) queries, we can make any page responsive to different viewport's(The viewport is a user's visible area of a web page, and is different depending on the device used to access the site)-->
+        <!-- 17. Instead of using em or px to size text, you can use viewport units for responsive typography. Viewport units, like percentages, are relative units, but they are based off different items.
+                   Viewport units are relative to the viewport dimensions (width or height) of a device, and percentages are relative to the size of the parent container element. 
+                      The four different viewport units are:
+                        1. vw (viewport width): 10vw would be 10% of the viewport's width.
+                        2. vh (viewport height): 3vh would be 3% of the viewport's height.
+                        3. vmin (viewport minimum): 70vmin would be 70% of the viewport's smaller dimension (height or width).
+                        4. vmax (viewport maximum): 100vmax would be 100% of the viewport's bigger dimension (height or width).
+         -->
 
         
         <header>
@@ -58,7 +71,7 @@
             <hr>
             <ol>
                 <li>list 1</li>
-                <li>list 1</li>
+                <li>list 1</li> 
                 <li>list 1</li>
             </ol>
         </div>
@@ -91,7 +104,6 @@
       <!-- 7. Padding, Margin and Border -->
 
         <h2 class="injected-text red_color darkblue-text" id="darkGreen" style="color: goldenrod;">margin</h2>
-
         <div class="box yellow-box">
         <h5 class="box red-box">padding</h5>
         <h5 class="box blue-box">padding</h5>
@@ -187,5 +199,103 @@
           </div>
           <hr>
 
+           <!-- Figure caption section -->
+          <div class="figureClass">
+            <figure class="figureClass">
+              <img id="figImage" src="https://images.unsplash.com/photo-1589041906208-73db169a1429?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                   alt="Unsplash Image">
+              <figcaption>Figure Caption goes here</figcaption>
+            </figure>
+          </div>
+          <!-- Figure caption section -->
+
+          <hr>
+          <!-- Label tag and for attribute -->
+          <div class="forClass">
+            <form action="https://www.freecodecamp.org/">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="form" placeholder="Enter you name (If you submit u will reach freeCodeCamp)">
+              <br>
+              <br>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="form" placeholder="Enter you email (If you submit u will reach freeCodeCamp)">
+              <br>
+              <br>
+              <label for="input1">Select Date:</label>
+              <input type="date" id="input1" name="input1">
+              <br>
+              <button accesskey="b">Submit</button>
+            </form>
+          </div>
+        <hr>
+        <div class="fieldsetClass">
+          <form>
+            <fieldset>
+              <legend>This is a example of form containing fieldset with legend(This entire line is legend). You can select any one option from below</legend>
+              <input id="one" type="radio" name="items" value="one">
+              <label for="one">Choice One</label><br>
+              <input id="two" type="radio" name="items" value="two">
+              <label for="two">Choice Two</label><br>
+              <input id="three" type="radio" name="items" value="three">
+              <label for="three">Choice Three</label>
+            </fieldset>
+          </form>
+        </div>
+        <hr>
+         
+        <!-- CSS Flex Section -->
+        <div class="cssFlex">
+            <h3>Without using display:flex property</h3>
+            <div id="box-container">
+              <div id="box-1"></div>
+              <div id="box-2"></div>
+            </div>
+            <br>
+            <h3>When we use display:flex property</h3>
+            <div id="box-container-using-flex">
+              <div id="box-1"></div>
+              <div id="box-2"></div>
+            </div>
+        </div>
+        <hr>
+        <div class="flexProperty">
+          <header>
+            <img src="https://github.com/bsangamesh/myPortfolio/blob/master/assets/css/me.jpg?raw=true" alt="Sangappa profile pic" class="profile-thumbnail">
+            <div class="profile-name">
+              <h3>Sangappa</h3>
+              <h4>@bsangappa</h4>
+            </div>
+            <div class="follow-btn">
+              <button><a href="https://www.linkedin.com/in/b-sangappa-12936984/">Follow</a></button>
+            </div>
+          </header>
+          <div id="inner">
+            <p>Learning Web develoment with freeCodeCamp.</p>
+            <span class="date">00:00 PM - 15 May 2020</span>
+            <hr>
+          </div>
+          <footer>
+            <div class="stats">
+              <div class="likes">
+                <strong>1</strong> Likes
+              </div>
+            </div>
+            <div class="cta">
+              <button class="share-btn">Share</button>  
+              <button class="like-btn">Like</button>
+            </div>
+          </footer>
+        </div>
+        <hr>
+        <div class="cssGridClass">
+          <div class="container">
+            <div class="d1">1</div>
+            <div class="d2">2</div>
+            <div class="d3">3</div>
+            <div class="d4">4</div>
+            <div class="d5">5</div>
+          </div>
+        </div>
+        
     </body>
 </html>
